@@ -4,8 +4,7 @@ import { getPosts } from "../actions";
 
 function PostList() {
   const dispatch = useDispatch();
-
-  const postURL = "https://jsonplaceholder.typicode.com/posts";
+  const posts = useSelector((state) => state.posts);
 
   useEffect(() => {
     dispatch(getPosts());
